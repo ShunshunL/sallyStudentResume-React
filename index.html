@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sally Student Resume</title>
+</head>
+<body>
+    <div id="application-root"></div>
+    <script
+        src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script
+        src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script
+        src="https://unpkg.com/babel-standalone@6/babel.min.js">
+    </script>
+    <script type="text/babel">
+        function App(props){
+            return <main>
+                <header><h1>Sally Student Resume</h1></header>
+                <section>
+			    <h2>Contact Info</h2>
+			    <ul>
+			        {props.children}
+				    <li><address><a href="mailto:sallystudent.gmail.com?" target='_blank'>Email address</a></address></li>
+                    <li><address><a href="tel:+12000000000"> number: 200-000-0000</a></address></li>
+				    <li>This is a piture of Sally Student:<br /></li>
+                </ul> 
+                <img src="https://pffbdesign.files.wordpress.com/2012/11/9_borat.jpg" alt="This is a picture of Sally Student" height="160" width="140"/>
+                </section>
+
+                <section>
+                <h2>Education</h2>
+                <ul>
+                    <li>Rainbow Elementry School</li>
+                    <li>Unicorn Middle School</li>
+                    <li>Candy High School</li>
+                    <li>No Name College</li>
+                </ul>
+                </section>
+
+                <section>
+                <h2>Employment History</h2>
+                <ul>
+                    <li><p>Company:Netflix</p><p>Job Title: FAKE Reality Show Star</p><p>Dates of employment: 2015-2017</p><p>Job Description: Making people do stupid things</p></li>
+                    <li><p>Company:Showtime</p><p>Job Title: Main star at "Who Is America"</p><p>Dates of employment: 2017-2018</p><p>Job Description: Making fun of America while making people think</p></li>
+                </ul>
+                </section>
+            </main>
+        }
+        ReactDOM.render(
+            <App>
+                <li>Name: Sally Student</li>
+            </App>,
+            document.querySelector('#application-root')
+        );
+    </script>
+</body>
+</html>
